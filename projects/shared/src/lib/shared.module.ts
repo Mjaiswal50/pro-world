@@ -12,7 +12,8 @@ import { HomepageComponent } from './homepage/homepage.component';
   imports: [
   ],
   exports: [
-    SharedComponent
+    SharedComponent,
+    HomepageComponent
   ]
 })
 export class SharedModule { }
