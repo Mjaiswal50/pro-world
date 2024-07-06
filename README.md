@@ -1,3 +1,63 @@
+ng new my-workspace --create-application=false
+cd my-workspace
+
+ng generate application base
+ng generate application ob
+ng generate application pb
+
+"projects": {
+  "base": {
+    ...
+    "architect": {
+      "serve": {
+        "options": {
+          "port": 4200
+        }
+      }
+    }
+  },
+  "ob": {
+    ...
+    "architect": {
+      "serve": {
+        "options": {
+          "port": 4201
+        }
+      }
+    }
+  },
+  "pb": {
+    ...
+    "architect": {
+      "serve": {
+        "options": {
+          "port": 4202
+        }
+      }
+    }
+  }
+}
+
+ng generate library shared
+cd projects/shared
+ng generate component homepage --module=./src/lib/shared.module.ts
+
+// moved homepage component folder inside lib
+
+export created entities in sharedmodule
+export created entities in public-api.ts
+ng build shared
+
+import module in your projects
+
+ng serve project-name
+
+
+v14.21.3 node
+7.7.6 npm
+
+
+
 # ProWorkspace
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
